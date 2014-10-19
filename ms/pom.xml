@@ -1,0 +1,83 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.iacrqq</groupId>
+  <artifactId>ms</artifactId>
+  <version>0.0.a-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>ms</name>
+  <url>http://www.waverider.ueuo.com</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <java.version>1.6</java.version>
+	<java.encoding>UTF-8</java.encoding>
+  </properties>
+  
+  <build>
+  	<finalName>ms</finalName>
+  	 
+  	<plugins>
+  		<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
+					<encoding>${java.encoding}</encoding>
+				</configuration>
+		</plugin>
+			
+		<plugin>
+        	<groupId>org.apache.maven.plugins</groupId>
+        	<artifactId>maven-source-plugin</artifactId>
+        	<version>2.1.2</version>
+        	<executions>
+          		<execution>
+            	<id>attach-sources</id>
+            	<phase>verify</phase>
+            	<goals>
+              		<goal>jar-no-fork</goal>
+            	</goals>
+          		</execution>
+        	</executions>
+      	</plugin>
+		
+  	</plugins>
+  </build>
+
+  <dependencies>
+  	<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.8.2</version>
+			<scope>test</scope>
+	</dependency>
+	<dependency>
+    	<groupId>org.springframework</groupId>
+    	<artifactId>spring-test</artifactId>
+    	<version>2.5</version>
+    	<scope>test</scope>
+	</dependency>
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-context</artifactId>
+		<version>2.5.6</version>
+	</dependency>
+    
+    <!-- Log Start -->
+    <dependency>
+		<groupId>commons-logging</groupId>
+		<artifactId>commons-logging</artifactId>
+		<version>1.1.1</version>
+	</dependency>
+	<dependency>
+		<groupId>log4j</groupId>
+		<artifactId>log4j</artifactId>
+		<version>1.2.16</version>
+	</dependency>
+	<!-- Log End -->
+	
+ </dependencies>
+</project>
